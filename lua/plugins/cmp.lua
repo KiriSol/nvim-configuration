@@ -3,8 +3,6 @@ return {
     { "hrsh7th/cmp-buffer", lazy = true, event = "InsertEnter", },
     { "hrsh7th/cmp-path", lazy = true, event = "InsertEnter", },
     { "hrsh7th/cmp-cmdline", lazy = true, event = "CmdlineEnter", },
-    { "hrsh7th/cmp-vsnip", lazy = true, event = "InsertEnter", },
-    { "hrsh7th/vim-vsnip", lazy = true, event = "InsertEnter", },
     {
         "hrsh7th/nvim-cmp",
         dependencies = { "onsails/lspkind.nvim" },
@@ -18,7 +16,7 @@ return {
                 snippet = {
                     -- REQUIRED - you must specify a snippet engine
                     expand = function(args)
-                        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+                        -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
                         -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
                         -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
                         -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
@@ -48,7 +46,7 @@ return {
                 }),
                 sources = cmp.config.sources({
                     { name = 'nvim_lsp' },
-                    { name = 'vsnip' }, -- For vsnip users.
+                    -- { name = 'vsnip' }, -- For vsnip users.
                     -- { name = 'luasnip' }, -- For luasnip users.
                     -- { name = 'ultisnips' }, -- For ultisnips users.
                     -- { name = 'snippy' }, -- For snippy users.

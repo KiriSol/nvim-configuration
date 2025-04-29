@@ -5,6 +5,7 @@ return {
         vim.lsp.enable("pyright")
         vim.lsp.enable("lua_ls")
         vim.lsp.enable("ruff")
+        vim.lsp.enable("jsonls")
     end,
     init = function ()
         vim.api.nvim_create_autocmd("LspAttach", {
