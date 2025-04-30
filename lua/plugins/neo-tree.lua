@@ -95,6 +95,6 @@ return {
 	    { "<leader>tg", "<cmd> Neotree git_status float <cr>", desc = "NeoTree", { noremap = true } },
 	    { "<leader>tb", "<cmd> Neotree buffers float <cr>", desc = "NeoTree", { noremap = true } },
 	    { "<localleader>te", "<cmd> Neotree filesystem position=current toggle <cr>", desc = "NeoTree", { noremap = true } },
-	    { "<localleader>ts", "<cmd> Neotree document_symbols toggle right <cr>", desc = "NeoTree", { noremap = true } },
+	    { "<localleader>ds", "<cmd> Neotree document_symbols toggle right <cr>", desc = "NeoTree", { noremap = true } },
     },
 }
