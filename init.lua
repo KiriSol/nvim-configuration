@@ -12,4 +12,3 @@ require("config.lazy")
 
 --   Colors startup
 require("config.colors")
-

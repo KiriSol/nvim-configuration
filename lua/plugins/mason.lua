@@ -1,10 +1,10 @@
 return {
-    "williamboman/mason.nvim",
-    lazy = false,
-    build = ":MasonUpdate",
-    opts = {
-        ui = {
-            border = "rounded",
-        },
-    },
+	"williamboman/mason.nvim",
+	lazy = false,
+	build = ":MasonUpdate",
+	opts = {
+		ui = {
+			border = "rounded",
+		},
+	},
 }

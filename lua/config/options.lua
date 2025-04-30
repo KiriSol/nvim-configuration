@@ -26,4 +26,3 @@ vim.opt.splitbelow = false
 vim.opt.splitright = true
 
 -- vim.opt.clipboard = "unnamedplus"
-
