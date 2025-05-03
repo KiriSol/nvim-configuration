@@ -1,6 +1,6 @@
 -- Startup settings
 
 SetBackground.isTransparent = true
-SetBackground.OtherTheme.SetColor("catppuccin")
+SetColor("catppuccin")
 
 SwitchTheme.list_to_switch = { "catppuccin", "onedark", "tokyonight" }

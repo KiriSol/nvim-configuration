@@ -1,4 +1,4 @@
---    Colors funcs
+--   Colors tools
 require("core.colors")
 
 --      Options
