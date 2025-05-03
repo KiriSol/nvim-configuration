@@ -21,16 +21,19 @@ return {
 			lua = { "stylua" },
 			python = function(bufnr)
 				if require("conform").get_formatter_info("ruff_format", bufnr).available then
-					return { "ruff_format", "black" }
+					return { "ruff_format" }
 				else
 					return { "isort", "black" }
 				end
 			end,
+			cpp = { "clang_format" },
+			sh = { "shfmt" },
+			bash = { "shfmt" },
+			-- zsh = { "shfmt" },
 			-- Use the "*" filetype to run formatters on all filetypes.
 			["*"] = { "codespell" },
-			-- Use the "_" filetype to run formatters on filetypes that don't
-			-- have other formatters configured.
-			["_"] = { "trim_whitespace" },
+			-- Use the "_" filetype to run formatters on filetypes that don't have other formatters configured.
+			["_"] = { "trim_whitespace", lsp_format = "prefer" },
 		},
 		-- Set default options
 		default_format_opts = {
@@ -43,6 +46,9 @@ return {
 		formatters = {
 			shfmt = {
 				prepend_args = { "-i", "2" },
+			},
+			clang_format = {
+				prepend_args = { "--style={BasedOnStyle: LLVM, IndentWidth: 4}" },
 			},
 		},
 	},
