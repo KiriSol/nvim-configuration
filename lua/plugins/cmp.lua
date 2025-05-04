@@ -1,12 +1,11 @@
 return {
-	{ "hrsh7th/cmp-nvim-lsp", lazy = true, event = "InsertEnter" },
-	{ "hrsh7th/cmp-buffer", lazy = true, event = "InsertEnter" },
-	{ "hrsh7th/cmp-path", lazy = true, event = "InsertEnter" },
-	{ "hrsh7th/cmp-cmdline", lazy = true, event = "CmdlineEnter" },
+	{ "hrsh7th/cmp-nvim-lsp", event = "InsertEnter" },
+	{ "hrsh7th/cmp-buffer", event = "InsertEnter" },
+	{ "hrsh7th/cmp-path", event = "InsertEnter" },
+	{ "hrsh7th/cmp-cmdline", event = "CmdlineEnter" },
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = { "onsails/lspkind.nvim" },
-		lazy = true,
 		event = { "InsertEnter", "CmdlineEnter" },
 		config = function()
 			-- Set up nvim-cmp.
@@ -90,10 +89,11 @@ return {
 			})
 
 			-- Set up lspconfig.
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			--[[ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			require("lspconfig")["pyright"].setup({
 				capabilities = capabilities,
-			})
+			}) ]]
+			--
 		end,
 	},
 }

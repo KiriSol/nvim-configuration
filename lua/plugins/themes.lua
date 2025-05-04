@@ -1,7 +1,7 @@
 Themes = {
 	{
 		"navarasu/onedark.nvim",
-		lazy = true,
+		event = { "ColorSchemePre" },
 		opts = {
 			style = "dark", -- dark, darker, cool, deep, warm, warmer, light
 			transparent = true,
@@ -37,7 +37,7 @@ Themes = {
 	},
 	{
 		"folke/tokyonight.nvim",
-		lazy = true,
+		event = { "ColorSchemePre" },
 		opts = {
 			style = "storm",
 			transparent = false,

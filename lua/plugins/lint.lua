@@ -16,11 +16,23 @@ return {
 			end,
 		})
 	end,
-	init = function()
-		vim.keymap.set("n", "<leader>ln", function()
-			local lint = require("lint")
-			lint.try_lint()
-			-- lint.try_lint("cspell")
-		end, { desc = "Trigger linting for current file" })
-	end,
+	keys = {
+		{
+			"<localleader>ln",
+			function()
+				local lint = require("lint")
+				lint.try_lint()
+				-- lint.try_lint("cspell")
+			end,
+			desc = "Trigger linting for current buffer",
+		},
+		{
+			"<localleader>cs",
+			function()
+				local lint = require("lint")
+				lint.try_lint("cspell")
+			end,
+			desc = "Trigger cspell lint for current buffer",
+		},
+	},
 }
