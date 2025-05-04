@@ -29,10 +29,10 @@ return {
 			noremap = true,
 		},
 		{ "<leader>lD", "<cmd> Telescope diagnostics <cr>", desc = "Telescope diagnostics", noremap = true },
-		{ "<leader>gr", "<cmd> Telescope lsp_references <cr>", desc = "Telescope lsp references", noremap = true },
-		{ "<leader>gd", "<cmd> Telescope lsp_definitions <cr>", desc = "Telescope lsp definitions", noremap = true },
+		{ "gr", "<cmd> Telescope lsp_references <cr>", desc = "Telescope lsp references", noremap = true },
+		{ "gd", "<cmd> Telescope lsp_definitions <cr>", desc = "Telescope lsp definitions", noremap = true },
 		{
-			"<leader>gi",
+			"gi",
 			"<cmd> Telescope lsp_implementions <cr>",
 			desc = "Telescope lsp implementations",
 			noremap = true,
