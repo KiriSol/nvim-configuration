@@ -53,13 +53,16 @@ Themes = {
 				SetBackground.CustomChangeFunc[v] = {
 					enable = function()
 						Themes[2].opts.transparent = true
+						Themes[2].opts.styles = {
+							sidebars = "transparent",
+							floats = "transparent",
+						}
 						tokyo.setup(Themes[2].opts)
 						vim.cmd.colorscheme(v)
-						-- TODO: сделать переопределение фона
-						vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "none" })
 					end,
 					disable = function()
 						Themes[2].opts.transparent = false
+						Themes[2].opts.styles = nil
 						tokyo.setup(Themes[2].opts)
 						vim.cmd.colorscheme(v)
 					end,
