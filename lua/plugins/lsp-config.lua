@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-	lazy = false,
+	event = "VeryLazy",
 	config = function()
 		local servers = { "pyright", "lua_ls", "jsonls", "clangd" }
 		vim.lsp.enable(servers)

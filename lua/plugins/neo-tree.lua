@@ -6,7 +6,6 @@ return {
 		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 		"MunifTanjim/nui.nvim",
 	},
-	lazy = true,
 	init = function()
 		vim.diagnostic.config({
 			signs = {

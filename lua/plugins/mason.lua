@@ -1,6 +1,6 @@
 return {
 	"williamboman/mason.nvim",
-	lazy = false,
+	event = "VeryLazy",
 	build = ":MasonUpdate",
 	opts = {
 		ui = {
