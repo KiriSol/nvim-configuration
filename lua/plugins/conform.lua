@@ -27,9 +27,9 @@ return {
 				end
 			end,
 			cpp = { "clang_format" },
+			c = { "clang_format" },
 			sh = { "shfmt" },
 			bash = { "shfmt" },
-			-- zsh = { "shfmt" },
 			-- Use the "*" filetype to run formatters on all filetypes.
 			["*"] = { "codespell" },
 			-- Use the "_" filetype to run formatters on filetypes that don't have other formatters configured.

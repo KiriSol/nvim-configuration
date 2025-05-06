@@ -59,42 +59,27 @@ return {
 						{ silent = true }
 					)
 				end
+				vim.keymap.set(
+					"n",
+					"grn",
+					FloatRename.float_rename,
+					{ buffer = ev.buf, desc = "Lsp float rename", noremap = true }
+				)
 
 				local args = { border = "rounded" }
 
 				vim.keymap.set("n", "<leader>ld", function()
 					vim.diagnostic.open_float(args)
-				end)
+				end, { desc = "Lsp diagnostic open float" })
 				vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 				vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-
-				local opts = { buffer = ev.buf }
-
-				vim.keymap.set("n", "<leader>lrn", FloatRename.float_rename, opts)
-
-				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = ev.buf, desc = "Lsp get declarations" })
 				vim.keymap.set("n", "K", function()
 					vim.lsp.buf.hover(args)
-				end, opts)
+				end, { buffer = ev.buf, desc = "Lsp get hover" })
 				vim.keymap.set("n", "<C-k>", function()
 					vim.lsp.buf.signature_help(args)
-				end, opts)
-				vim.keymap.set({ "n", "v" }, "<leader>lca", vim.lsp.buf.code_action, opts)
-				-- Заменено Conform
-				-- vim.keymap.set("n", "<leader>lf", function()
-				--     vim.lsp.buf.format({ async = true })
-				-- end, opts)
-				-- Не нужно
-				-- vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
-				-- vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts)
-				-- vim.keymap.set("n", "<leader>wl", function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, opts)
-				-- vim.keymap.set("n", "<leader>lrn", vim.lsp.buf.rename, opts)
-				-- Заменено Telescope
-				-- vim.keymap.set("n", "<localleader>ld", vim.diagnostic.setloclist)
-				-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-				-- vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
-				-- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-				-- vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, opts)
+				end, { buffer = ev.buf, desc = "Lsp get signature help" })
 			end,
 		})
 	end,
