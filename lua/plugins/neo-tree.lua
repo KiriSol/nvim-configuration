@@ -34,8 +34,8 @@ return {
 			"git_status",
 		},
 		-- source_selector = {
-		-- winbar = true,
-		-- statusline = true,
+		-- 	winbar = true,
+		-- 	statusline = true,
 		-- },
 
 		default_component_configs = {
@@ -56,7 +56,7 @@ return {
 		document_symbols = {
 			window = {
 				position = "right",
-				width = 30,
+				width = 35,
 				mapping_options = {
 					noremap = true,
 					nowait = true,

@@ -29,7 +29,6 @@ return {
 			-- List of parsers to ignore installing (or "all")
 			ignore_install = {
 				"tmux",
-				"javascript",
 			},
 
 			---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
