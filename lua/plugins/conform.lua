@@ -1,6 +1,6 @@
 return {
 	"stevearc/conform.nvim",
-	event = { "BufWritePre" },
+	event = "BufWritePre",
 	cmd = { "ConformInfo" },
 	keys = {
 		-- Customize or remove this keymap to your liking
