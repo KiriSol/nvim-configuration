@@ -2,11 +2,41 @@ return {
 	"nvim-telescope/telescope.nvim",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	cmd = { "Telescope" },
-	opts = {},
+	opts = {
+		defaults = {
+			file_ignore_patterns = {
+				".git",
+				".venv",
+				"__pycache__",
+				".ruff_cache",
+				".buildozer",
+				".idea",
+				"node_modules",
+				"build",
+				"dist",
+			},
+		},
+	},
 	keys = {
 		-- Find
 		{ "<leader>ff", "<cmd> Telescope find_files <cr>", desc = "Telescope find files", noremap = true },
+		{
+			"<leader>fF",
+			function()
+				require("telescope.builtin").find_files({ hidden = true })
+			end,
+			desc = "Telescope find files with hidden",
+			noremap = true,
+		},
 		{ "<leader>fg", "<cmd> Telescope live_grep <cr>", desc = "Telescope live grep", noremap = true },
+		{
+			"<leader>fG",
+			function()
+				require("telescope.builtin").live_grep({ hidden = true })
+			end,
+			desc = "Telescope find files with hidde",
+			noremap = true,
+		},
 		{ "<leader>fw", "<cmd> Telescope grep_string <cr>", desc = "Telescope grep string", noremap = true },
 		{ "<leader>fb", "<cmd> Telescope buffers <cr>", desc = "Telescope buffers", noremap = true },
 		{ "<leader>fo", "<cmd> Telescope oldfiles <cr>", desc = "Telescope old files", noremap = true },

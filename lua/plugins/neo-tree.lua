@@ -80,7 +80,6 @@ return {
 					"**/.venv",
 					"**/__pycache__",
 					"**/.buildozer",
-					"**/bin",
 					"**/idea",
 					"**/.ruff_cache",
 					"**/.python-version",
