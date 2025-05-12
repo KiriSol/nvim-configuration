@@ -47,5 +47,6 @@ return {
 			desc = "Telescope spell suggest",
 			noremap = true,
 		},
+		{ "<leader>ft", "<cmd> TodoTelescope <cr>", desc = "Telescope find todo-comments", noremap = true },
 	},
 }
