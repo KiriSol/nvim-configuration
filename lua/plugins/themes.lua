@@ -108,6 +108,37 @@ Themes = {
 			end
 		end,
 	},
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		opts = {
+			italic = {
+				strings = false,
+				emphasis = true,
+				comments = true,
+				operators = false,
+				folds = true,
+			},
+			inverse = true, -- invert background for search, diffs, statuslines and errors
+			contrast = "soft", -- can be "hard", "soft" or empty string
+			transparent_mode = true,
+		},
+		init = function()
+			SetBackground.CustomChangeFunc.gruvbox = {
+				enable = function()
+					Themes[4].opts.transparent_mode = true
+					require("gruvbox").setup(Themes[4].opts)
+					vim.cmd.colorscheme("gruvbox")
+					vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none" })
+				end,
+				disable = function()
+					Themes[4].opts.transparent_mode = false
+					require("gruvbox").setup(Themes[4].opts)
+					vim.cmd.colorscheme("gruvbox")
+				end,
+			}
+		end,
+	},
 }
 
 return Themes
