@@ -26,6 +26,7 @@ Themes = {
 					vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
 					vim.api.nvim_set_hl(0, "NeoTreeFloatTitle", { bg = "none" })
 					vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+					vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none" })
 				end,
 				disable = function()
 					Themes[1].opts.transparent = false
@@ -59,6 +60,7 @@ Themes = {
 						}
 						tokyo.setup(Themes[2].opts)
 						vim.cmd.colorscheme(v)
+						vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none" })
 					end,
 					disable = function()
 						Themes[2].opts.transparent = false

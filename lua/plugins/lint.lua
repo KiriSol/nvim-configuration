@@ -18,7 +18,7 @@ return {
 	end,
 	keys = {
 		{
-			"<localleader>ln",
+			"<leader>ln",
 			function()
 				local lint = require("lint")
 				lint.try_lint()
@@ -27,7 +27,7 @@ return {
 			desc = "Trigger linting for current buffer",
 		},
 		{
-			"<localleader>ls",
+			"<leader>ls",
 			function()
 				local lint = require("lint")
 				lint.try_lint("cspell")

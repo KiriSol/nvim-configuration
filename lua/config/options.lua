@@ -21,6 +21,7 @@ vim.opt.ignorecase = true -- Игнорировать регистр при по
 vim.opt.smartcase = true -- Игнорировать регистр, если нет заглавных букв
 
 vim.opt.mouse = "a"
+vim.opt.mousemoveevent = true
 
 vim.opt.splitbelow = false
 vim.opt.splitright = true
