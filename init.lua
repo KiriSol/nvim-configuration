@@ -1,3 +1,5 @@
+require("core.constants")
+
 --   Colors tools
 require("core.colors")
 

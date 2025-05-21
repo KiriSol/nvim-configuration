@@ -12,7 +12,6 @@ return {
 			end,
 			indicator = { style = "none" },
 			-- separator_style = "slant" | "slope" | "thick" | "thin" | { 'any', 'any' },
-			separator_style = { "", "" },
 			hover = {
 				enabled = true,
 				delay = 100,

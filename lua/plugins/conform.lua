@@ -26,8 +26,10 @@ return {
 					return { "isort", "black" }
 				end
 			end,
-			cpp = { "clang_format" },
 			c = { "clang_format" },
+			cpp = { "clang_format" },
+			java = { "clang_format" },
+			cs = { "clang_format" },
 			sh = { "shfmt" },
 			bash = { "shfmt" },
 			-- Use the "*" filetype to run formatters on all filetypes.

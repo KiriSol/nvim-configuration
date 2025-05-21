@@ -7,19 +7,6 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	cmd = "Neotree",
-	init = function()
-		vim.diagnostic.config({
-			signs = {
-				text = {
-					[vim.diagnostic.severity.ERROR] = "",
-					[vim.diagnostic.severity.WARN] = "",
-					[vim.diagnostic.severity.INFO] = "",
-					[vim.diagnostic.severity.HINT] = "󰌵",
-				},
-			},
-		})
-	end,
-
 	---@module "neo-tree"
 	---@type neotree.Config?
 	opts = {
@@ -74,31 +61,48 @@ return {
 				},
 			},
 			filtered_items = {
-				never_show_by_pattern = {
-					"**/.git",
-					"**/node_modules",
-					"**/.venv",
-					"**/__pycache__",
-					"**/.buildozer",
-					"**/idea",
-					"**/.ruff_cache",
-					"**/.python-version",
-				},
+				never_show_by_pattern = IGNONE_FILETYES_BY_PATTERN,
 			},
 		},
 	},
 	keys = {
-		{ "<leader>e", "<cmd> Neotree filesystem reveal left <cr>", desc = "NeoTree", { noremap = true } },
-		{ "<leader>te", "<cmd> Neotree filesystem reveal toggle left <cr>", desc = "NeoTree", { noremap = true } },
-		{ "<leader>tf", "<cmd> Neotree filesystem reveal float <cr>", desc = "NeoTree", { noremap = true } },
-		{ "<leader>tg", "<cmd> Neotree git_status float <cr>", desc = "NeoTree", { noremap = true } },
-		{ "<leader>tb", "<cmd> Neotree buffers float <cr>", desc = "NeoTree", { noremap = true } },
 		{
-			"<localleader>te",
-			"<cmd> Neotree filesystem position=current toggle <cr>",
-			desc = "NeoTree",
+			"<leader>ee",
+			"<cmd> Neotree filesystem left <cr>",
+			desc = "NeoTree filesystem left focus",
 			{ noremap = true },
 		},
-		{ "<localleader>ds", "<cmd> Neotree document_symbols toggle right <cr>", desc = "NeoTree", { noremap = true } },
+		{
+			"<leader>E",
+			"<cmd> Neotree filesystem reveal left <cr>",
+			desc = "NeoTree filesystem left reveal focus",
+			{ noremap = true },
+		},
+		{
+			"<leader>et",
+			"<cmd> Neotree filesystem reveal toggle left <cr>",
+			desc = "NeoTree filesystem left toggle",
+			{ noremap = true },
+		},
+		{
+			"<leader>ef",
+			"<cmd> Neotree filesystem reveal float <cr>",
+			desc = "NeoTree filesystem float",
+			{ noremap = true },
+		},
+		{ "<leader>eb", "<cmd> Neotree buffers float <cr>", desc = "NeoTree buffers", { noremap = true } },
+		{ "<leader>gS", "<cmd> Neotree git_status float <cr>", desc = "NeoTree git_status", { noremap = true } },
+		-- {
+		-- 	"<localleader>et",
+		-- 	"<cmd> Neotree filesystem position=current toggle <cr>",
+		-- 	desc = "NeoTree",
+		-- 	{ noremap = true },
+		-- },
+		{
+			"<leader>lds",
+			"<cmd> Neotree document_symbols toggle right <cr>",
+			desc = "NeoTree document symbols",
+			{ noremap = true },
+		},
 	},
 }

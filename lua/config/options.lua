@@ -30,3 +30,14 @@ vim.opt.splitright = true
 
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
+
+vim.diagnostic.config({
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = "",
+			[vim.diagnostic.severity.WARN] = "",
+			[vim.diagnostic.severity.INFO] = "",
+			[vim.diagnostic.severity.HINT] = "󰌵",
+		},
+	},
+})

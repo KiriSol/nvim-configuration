@@ -5,7 +5,7 @@ vim.g.colors_name = vim.g.colors_name or "default"
 SetBackground = {
 	isTransparent = false,
 	VimTheme = {
-		---@param color string
+		---@param color string | nil
 		SetColor = function(color)
 			if color then
 				vim.cmd.colorscheme(color)

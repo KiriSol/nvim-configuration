@@ -4,17 +4,7 @@ return {
 	cmd = { "Telescope" },
 	opts = {
 		defaults = {
-			file_ignore_patterns = {
-				".git",
-				".venv",
-				"__pycache__",
-				".ruff_cache",
-				".buildozer",
-				".idea",
-				"node_modules",
-				"build",
-				"dist",
-			},
+			file_ignore_patterns = IGNONE_FILETYES_BY_PATTERN,
 		},
 	},
 	keys = {
@@ -48,9 +38,9 @@ return {
 			noremap = true,
 		},
 		-- Git
-		{ "<localleader>gs", "<cmd> Telescope git_status <cr>", desc = "Telescope git status", noremap = true },
-		{ "<localleader>gc", "<cmd> Telescope git_commits <cr>", desc = "Telescope git commits", noremap = true },
-		{ "<localleader>gb", "<cmd> Telescope git_branches <cr>", desc = "Telescope git branches", noremap = true },
+		{ "<leader>gs", "<cmd> Telescope git_status <cr>", desc = "Telescope git status", noremap = true },
+		{ "<leader>gc", "<cmd> Telescope git_commits <cr>", desc = "Telescope git commits", noremap = true },
+		{ "<leader>gb", "<cmd> Telescope git_branches <cr>", desc = "Telescope git branches", noremap = true },
 		-- Lsp
 		{
 			"<localleader>dS",
