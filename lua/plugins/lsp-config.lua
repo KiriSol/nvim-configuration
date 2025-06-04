@@ -2,8 +2,11 @@ return {
 	"neovim/nvim-lspconfig",
 	event = "VeryLazy",
 	config = function()
-		local servers = { "pyright", "lua_ls", "jsonls", "clangd", "ts_ls" }
+		local servers = { "pyright", "lua_ls", "jsonls", "clangd", "ts_ls", "bashls", "ruff" }
 		vim.lsp.enable(servers)
+		vim.lsp.config("bashls", {
+			filetypes = { "sh", "bash", "zsh" },
+		})
 	end,
 	init = function()
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -25,7 +28,6 @@ return {
 						width = 25,
 						height = 1,
 						style = "minimal",
-						border = "rounded",
 						title = " New name ",
 						title_pos = "center",
 					}
@@ -66,20 +68,17 @@ return {
 					{ buffer = ev.buf, desc = "Lsp float rename", noremap = true }
 				)
 
-				local args = { border = "rounded" }
-
-				vim.keymap.set("n", "<leader>ld", function()
-					vim.diagnostic.open_float(args)
-				end, { desc = "Lsp diagnostic open float" })
+				vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Lsp diagnostic open float" })
 				vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 				vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = ev.buf, desc = "Lsp get declarations" })
-				vim.keymap.set("n", "K", function()
-					vim.lsp.buf.hover(args)
-				end, { buffer = ev.buf, desc = "Lsp get hover" })
-				vim.keymap.set("n", "<C-k>", function()
-					vim.lsp.buf.signature_help(args)
-				end, { buffer = ev.buf, desc = "Lsp get signature help" })
+				vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = ev.buf, desc = "Lsp get hover" })
+				vim.keymap.set(
+					"n",
+					"gK",
+					vim.lsp.buf.signature_help,
+					{ buffer = ev.buf, desc = "Lsp get signature help" }
+				)
 			end,
 		})
 	end,

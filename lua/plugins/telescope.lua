@@ -4,9 +4,24 @@ return {
 	cmd = { "Telescope" },
 	opts = {
 		defaults = {
-			file_ignore_patterns = IGNONE_FILETYES_BY_PATTERN,
+			file_ignore_patterns = IGNONE_FILETYPES_BY_PATTERN,
 		},
 	},
+	init = function()
+		-- Issue: support 0.11 'winborder' #3436 https://github.com/nvim-telescope/telescope.nvim/issues/3436
+		vim.api.nvim_create_autocmd("User", {
+			pattern = "TelescopeFindPre",
+			callback = function()
+				vim.opt_local.winborder = "none"
+				vim.api.nvim_create_autocmd("WinLeave", {
+					once = true,
+					callback = function()
+						vim.opt_local.winborder = "rounded"
+					end,
+				})
+			end,
+		})
+	end,
 	keys = {
 		-- Find
 		{ "<leader>ff", "<cmd> Telescope find_files <cr>", desc = "Telescope find files", noremap = true },
@@ -24,15 +39,21 @@ return {
 			function()
 				require("telescope.builtin").live_grep({ hidden = true })
 			end,
-			desc = "Telescope find files with hidde",
+			desc = "Telescope live grep with hidden files",
 			noremap = true,
 		},
 		{ "<leader>fw", "<cmd> Telescope grep_string <cr>", desc = "Telescope grep string", noremap = true },
+		{
+			"<leader>fW",
+			"<cmd> Telescope grep_string <cr>",
+			desc = "Telescope grep string with hidden files",
+			noremap = true,
+		},
 		{ "<leader>fb", "<cmd> Telescope buffers <cr>", desc = "Telescope buffers", noremap = true },
 		{ "<leader>fo", "<cmd> Telescope oldfiles <cr>", desc = "Telescope old files", noremap = true },
 		{ "<leader>fh", "<cmd> Telescope help_tags <cr>", desc = "Telescope help tags", noremap = true },
 		{
-			"<leader>f*",
+			"<leader>fz",
 			"<cmd> Telescope current_buffer_fuzzy_find <cr>",
 			desc = "Telescope current buffer fuzzy find",
 			noremap = true,
@@ -43,14 +64,14 @@ return {
 		{ "<leader>gb", "<cmd> Telescope git_branches <cr>", desc = "Telescope git branches", noremap = true },
 		-- Lsp
 		{
-			"<localleader>dS",
+			"<leader>fs",
 			"<cmd> Telescope lsp_document_symbols <cr>",
 			desc = "Telescope lsp document symbols",
 			noremap = true,
 		},
 		{ "<leader>lD", "<cmd> Telescope diagnostics <cr>", desc = "Telescope diagnostics", noremap = true },
 		{ "gd", "<cmd> Telescope lsp_definitions <cr>", desc = "Telescope lsp definitions", noremap = true },
-		{ "gy", "<cmd> Telescope lsp_type_definitions <cr>", desc = "Telescope lsp references", noremap = true },
+		{ "gy", "<cmd> Telescope lsp_type_definitions <cr>", desc = "Telescope lsp type definitions", noremap = true },
 		{ "grr", "<cmd> Telescope lsp_references <cr>", desc = "Telescope lsp references", noremap = true },
 		{
 			"gri",

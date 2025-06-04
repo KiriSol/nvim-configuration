@@ -59,7 +59,7 @@ SetBackground = {
 		},
 	},
 	OtherTheme = {
-		---@param color string
+		---@param color string | nil
 		SetColor = function(color)
 			if color then
 				vim.cmd.colorscheme(color)

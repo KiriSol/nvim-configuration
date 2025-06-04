@@ -32,6 +32,7 @@ return {
 			cs = { "clang_format" },
 			sh = { "shfmt" },
 			bash = { "shfmt" },
+			zsh = { "beautysh" },
 			-- Use the "*" filetype to run formatters on all filetypes.
 			["*"] = { "codespell" },
 			-- Use the "_" filetype to run formatters on filetypes that don't have other formatters configured.
@@ -51,6 +52,9 @@ return {
 			},
 			clang_format = {
 				prepend_args = { "--style={BasedOnStyle: LLVM, IndentWidth: 4}" },
+			},
+			beautysh = {
+				prepend_args = { "-i", "2" },
 			},
 		},
 	},

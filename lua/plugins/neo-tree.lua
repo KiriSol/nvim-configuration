@@ -61,7 +61,7 @@ return {
 				},
 			},
 			filtered_items = {
-				never_show_by_pattern = IGNONE_FILETYES_BY_PATTERN,
+				never_show_by_pattern = IGNONE_FILETYPES_BY_PATTERN,
 			},
 		},
 	},
@@ -99,7 +99,7 @@ return {
 		-- 	{ noremap = true },
 		-- },
 		{
-			"<leader>lds",
+			"gO",
 			"<cmd> Neotree document_symbols toggle right <cr>",
 			desc = "NeoTree document symbols",
 			{ noremap = true },

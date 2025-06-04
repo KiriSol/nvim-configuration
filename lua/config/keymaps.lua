@@ -11,7 +11,7 @@ vim.keymap.set(
 )
 vim.keymap.set("n", "<localleader>st", "<cmd> lua SwitchTheme.switch() <cr>", { noremap = true, silent = true })
 
-vim.keymap.set("n", "<leader>bw", "<cmd> wa <cr>", { noremap = true })
+vim.keymap.set("n", "<localleader>w", "<cmd> wa <cr>", { noremap = true })
 vim.keymap.set("n", "<leader>:", ":lua ", { noremap = true })
 
 vim.keymap.set("v", "<localleader>y", '"+y', { noremap = true })

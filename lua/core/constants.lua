@@ -1,4 +1,4 @@
-_G.IGNONE_FILETYES_BY_PATTERN = {
+_G.IGNONE_FILETYPES_BY_PATTERN = {
 	-- Tools
 	".git",
 	-- JS
