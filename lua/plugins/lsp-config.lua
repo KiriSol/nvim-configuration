@@ -2,10 +2,19 @@ return {
 	"neovim/nvim-lspconfig",
 	event = "VeryLazy",
 	config = function()
-		local servers = { "pyright", "lua_ls", "jsonls", "clangd", "ts_ls", "bashls", "ruff" }
+		local servers = { "lua_ls", "jsonls", "clangd", "ts_ls", "bashls", "pyright", "ruff", "ty" }
 		vim.lsp.enable(servers)
 		vim.lsp.config("bashls", {
 			filetypes = { "sh", "bash", "zsh" },
+		})
+		vim.lsp.config("pyright", {
+			settings = {
+				python = {
+					analysis = {
+						typeCheckingMode = "off",
+					},
+				},
+			},
 		})
 	end,
 	init = function()
@@ -79,6 +88,7 @@ return {
 					vim.lsp.buf.signature_help,
 					{ buffer = ev.buf, desc = "Lsp get signature help" }
 				)
+				vim.keymap.set("n", "grd", vim.lsp.buf.definition, { buffer = ev.buf, desc = "Lsp go to definition" })
 			end,
 		})
 	end,

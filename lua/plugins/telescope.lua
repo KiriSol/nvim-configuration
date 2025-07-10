@@ -58,6 +58,16 @@ return {
 			desc = "Telescope current buffer fuzzy find",
 			noremap = true,
 		},
+		{
+			"<leader>fc",
+			function()
+				require("telescope.builtin").find_files({
+					cwd = vim.fn.stdpath("config"),
+				})
+			end,
+			desc = "Telescope find files in config dir",
+			noremap = true,
+		},
 		-- Git
 		{ "<leader>gs", "<cmd> Telescope git_status <cr>", desc = "Telescope git status", noremap = true },
 		{ "<leader>gc", "<cmd> Telescope git_commits <cr>", desc = "Telescope git commits", noremap = true },
