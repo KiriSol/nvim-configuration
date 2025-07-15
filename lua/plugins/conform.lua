@@ -33,6 +33,12 @@ return {
 			sh = { "shfmt" },
 			bash = { "shfmt" },
 			zsh = { "beautysh" },
+			json = { "prettierd" },
+			yaml = { "prettierd" },
+			html = { "prettierd" },
+			css = { "prettierd" },
+			javascript = { "prettierd" },
+			typescript = { "prettierd" },
 			-- Use the "*" filetype to run formatters on all filetypes.
 			["*"] = { "codespell" },
 			-- Use the "_" filetype to run formatters on filetypes that don't have other formatters configured.
