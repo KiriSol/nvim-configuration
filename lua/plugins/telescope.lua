@@ -90,7 +90,7 @@ return {
 			noremap = true,
 		},
 		-- Other
-		{ "<localleader>rg", "<cmd> Telescope registers <cr>", desc = "Telescope registers", noremap = true },
+		-- { "<localleader>rg", "<cmd> Telescope registers <cr>", desc = "Telescope registers", noremap = true },
 		{
 			"<A-s>",
 			"<cmd> Telescope spell_suggest <cr>",

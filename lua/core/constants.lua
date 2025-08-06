@@ -1,6 +1,6 @@
 _G.IGNONE_FILETYPES_BY_PATTERN = {
 	-- Tools
-	".git",
+	".git/",
 	-- JS
 	"node_modules",
 	-- Python
@@ -9,7 +9,6 @@ _G.IGNONE_FILETYPES_BY_PATTERN = {
 	".buildozer",
 	".ruff_cache",
 	".python-version",
-	"uv.lock",
 	-- Other
 	".idea",
 }

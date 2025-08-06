@@ -5,13 +5,14 @@ vim.g.maplocalleader = "\\"
 
 vim.keymap.set(
 	"n",
-	"<localleader>bg",
+	"<leader>sb",
 	"<cmd> lua SetBackground.OtherTheme.transparency.toggle() <cr>",
-	{ noremap = true, silent = true }
+	{ noremap = true, desc = "Switch background transparency" }
 )
-vim.keymap.set("n", "<localleader>st", "<cmd> lua SwitchTheme.switch() <cr>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>st", "<cmd> lua SwitchTheme.switch() <cr>", { noremap = true, desc = "Switch theme" })
+vim.keymap.set("n", "<leader>sw", "<cmd> lua SwitchWrap() <cr>", { noremap = true, desc = "Switch wrap" })
 
-vim.keymap.set("n", "<localleader>w", "<cmd> wa <cr>", { noremap = true })
+vim.keymap.set("n", "<leader>w", "<cmd> wa <cr>", { noremap = true })
 vim.keymap.set("n", "<leader>:", ":lua ", { noremap = true })
 
 vim.keymap.set("v", "<localleader>y", '"+y', { noremap = true })
@@ -20,4 +21,4 @@ vim.keymap.set("n", "<localleader>yy", '"+yy', { noremap = true })
 vim.keymap.set("n", "<localleader>p", '"+p', { noremap = true })
 vim.keymap.set("n", "<localleader>P", '"+P', { noremap = true })
 
-vim.keymap.set("n", "<localleader>lz", "<cmd> Lazy <cr>")
+vim.keymap.set("n", "<leader>z", "<cmd> Lazy <cr>")

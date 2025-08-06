@@ -1,16 +1,19 @@
 require("core.constants")
 
---   Colors tools
+-- Colors tools
 require("core.colors")
 
---      Options
+-- Functions
+require("core.functions")
+
+-- Options
 require("config.options")
 
---      Mappings
+-- Mappings
 require("config.keymaps")
 
---      Plugins
+-- Plugins
 require("config.lazy")
 
---   Colors startup
+-- Colors
 require("config.colors")

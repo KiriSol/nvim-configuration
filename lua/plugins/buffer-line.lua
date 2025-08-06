@@ -21,8 +21,8 @@ return {
 	},
 	keys = {
 		{ "gb", "<cmd> BufferLinePick <cr>", desc = "Goto certain buffer" },
-		{ "<leader>bx", "<cmd> BufferLinePickClose <cr>", desc = "Close certain buffer" },
-		{ "<leader>bX", "<cmd> BufferLineCloseOthers <cr>", desc = "Close other buffers" },
+		{ "<leader>x", "<cmd> BufferLinePickClose <cr>", desc = "Close certain buffer" },
+		{ "<leader>X", "<cmd> BufferLineCloseOthers <cr>", desc = "Close other buffers" },
 		{ "<leader>bp", "<cmd> BufferLineTogglePin <cr>", desc = "Toggle pin buffer" },
 		{ "<leader>bl", "<cmd> BufferLineCloseLeft <cr>", desc = "Close left buffers" },
 		{ "<leader>bh", "<cmd> BufferLineCloseRight <cr>", desc = "Close right buffers" },

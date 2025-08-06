@@ -1,5 +1,4 @@
 -- Set options
-vim.opt.termguicolors = true
 vim.g.colors_name = vim.g.colors_name or "default"
 
 SetBackground = {
@@ -30,7 +29,7 @@ SetBackground = {
 			disable = function()
 				SetBackground.isTransparent = false
 				vim.cmd.colorscheme(vim.g.colors_name)
-				local background = vim.api.nvim_get_hl_by_name("Normal", true).background
+				local background = string.format("#%06x", vim.api.nvim_get_hl(0, { name = "Normal" }).bg)
 				background = background or "#2E3440"
 				vim.api.nvim_set_hl(0, "Normal", { bg = background })
 				SetBackground.VimTheme.SetColor()

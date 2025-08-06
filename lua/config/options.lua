@@ -1,27 +1,28 @@
-vim.opt.number = true -- Номера строк
-vim.opt.relativenumber = true -- Относительные номера строк
-vim.opt.numberwidth = 4 -- Ширина номера строки
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.numberwidth = 4
 
-vim.opt.cursorline = true -- Выделене линии курсора
+vim.opt.cursorline = true
 
-vim.opt.scrolloff = 5 -- Отступ от края экрана при прокрутке
+vim.opt.scrolloff = 5
 vim.opt.showmode = false
 
-vim.opt.wrap = false -- Перенос строк
+vim.opt.wrap = false
 
-vim.opt.expandtab = true -- Замена табуляции но пробелы
-vim.opt.tabstop = 4 -- Количество пробелов для табуляции
-vim.opt.shiftwidth = 4 -- Количество пробелов при автодобавлении отступов
-vim.opt.softtabstop = 4 -- Количество пробелов при автотабуляции
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
 
-vim.opt.smarttab = true -- Умное поведение табуляции
-vim.opt.smartindent = true -- Умное выравнивание табуляции
+vim.opt.smarttab = true
+vim.opt.smartindent = true
 
-vim.opt.ignorecase = true -- Игнорировать регистр при поиске
-vim.opt.smartcase = true -- Игнорировать регистр, если нет заглавных букв
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.opt.mouse = "a"
 vim.opt.mousemoveevent = true
+vim.opt.termguicolors = true
 
 vim.opt.splitbelow = false
 vim.opt.splitright = true

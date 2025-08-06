@@ -14,18 +14,12 @@ return {
 		popup_border_style = "rounded",
 		enable_git_status = true,
 		enable_diagnostics = true,
-
 		sources = {
 			"document_symbols",
 			"filesystem",
 			"buffers",
 			"git_status",
 		},
-		-- source_selector = {
-		-- 	winbar = true,
-		-- 	statusline = true,
-		-- },
-
 		default_component_configs = {
 			indent = {
 				-- indent_size = 2,
@@ -92,12 +86,6 @@ return {
 		},
 		{ "<leader>eb", "<cmd> Neotree buffers float <cr>", desc = "NeoTree buffers", { noremap = true } },
 		{ "<leader>gS", "<cmd> Neotree git_status float <cr>", desc = "NeoTree git_status", { noremap = true } },
-		-- {
-		-- 	"<localleader>et",
-		-- 	"<cmd> Neotree filesystem position=current toggle <cr>",
-		-- 	desc = "NeoTree",
-		-- 	{ noremap = true },
-		-- },
 		{
 			"gO",
 			"<cmd> Neotree document_symbols toggle right <cr>",
