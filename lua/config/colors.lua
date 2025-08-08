@@ -1,6 +1,6 @@
 -- Startup settings
 
-SetBackground.isTransparent = true
+SetBackground.is_transparent = true
 SetColor("catppuccin")
 
-SwitchTheme.list_to_switch = { "catppuccin", "onedark", "tokyonight", "gruvbox" }
+SwitchTheme.list = { "catppuccin", "onedark", "tokyonight", "gruvbox" }

@@ -13,7 +13,7 @@ Themes = {
 			colors = {
 				bg0 = "#313746",
 				bg1 = "#3b4252",
-				bg_d = "#2e3440", -- Neo-tree split
+				bg_d = "#2e3440",
 			},
 		},
 		init = function()
@@ -98,6 +98,9 @@ Themes = {
 						cat.options.transparent_background = true
 						cat.compile()
 						vim.cmd.colorscheme("catppuccin")
+						-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+						-- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+						-- vim.api.nvim_set_hl(0, "FloatTitle", { bg = "none" })
 					end,
 					disable = function()
 						cat.options.transparent_background = false
