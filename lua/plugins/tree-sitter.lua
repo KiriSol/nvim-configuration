@@ -12,6 +12,7 @@ return {
 				"json",
 				"jsonc",
 				"toml",
+                "yaml"
 				"lua",
 				"vim",
 				"vimdoc",
