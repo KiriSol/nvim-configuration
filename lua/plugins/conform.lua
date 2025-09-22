@@ -54,9 +54,9 @@ return {
 		format_on_save = { timeout_ms = 500 },
 		-- Customize formatters
 		formatters = {
-			shfmt = {
-				prepend_args = { "-i", "2" },
-			},
+			-- shfmt = {
+			-- 	prepend_args = { "-i", "2" },
+			-- },
 			clang_format = {
 				prepend_args = { "--style={BasedOnStyle: LLVM, IndentWidth: 4}" },
 			},
