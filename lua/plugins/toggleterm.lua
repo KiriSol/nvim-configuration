@@ -46,7 +46,7 @@ return {
 			end,
 		},
 		winbar = {
-			enabled = true,
+			-- enabled = true,
 		},
 	},
 	keys = {
