@@ -2,8 +2,20 @@ return {
 	"neovim/nvim-lspconfig",
 	event = "VeryLazy",
 	config = function()
-		local servers =
-			{ "lua_ls", "vimls", "jsonls", "clangd", "ts_ls", "bashls", "pyright", "ruff", "ty", "powershell_es" }
+		local servers = {
+			"lua_ls",
+			"vimls",
+			"jsonls",
+			"bashls",
+			"powershell_es",
+			"clangd",
+			"rust_analyzer",
+			"pyright",
+			"ruff",
+			"ty",
+			"ts_ls",
+			"cspell_ls",
+		}
 		vim.lsp.enable(servers)
 		vim.lsp.config("bashls", {
 			filetypes = { "sh", "bash", "zsh" },
