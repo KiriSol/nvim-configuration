@@ -4,10 +4,10 @@ return {
 	config = function()
 		local servers = {
 			"lua_ls",
-			"vimls",
+			-- "vimls",
 			"jsonls",
 			"bashls",
-			"powershell_es",
+			-- "powershell_es",
 			"clangd",
 			"rust_analyzer",
 			"pyright",
