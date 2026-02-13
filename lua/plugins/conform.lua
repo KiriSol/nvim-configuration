@@ -32,7 +32,7 @@ return {
 			cs = { "clang_format" },
 			sh = { "shfmt" },
 			bash = { "shfmt" },
-			zsh = { "beautysh" },
+			zsh = { "shfmt" },
 			json = { "prettierd" },
 			yaml = { "prettierd" },
 			html = { "prettierd" },
@@ -55,14 +55,11 @@ return {
 		format_on_save = { timeout_ms = 500 },
 		-- Customize formatters
 		formatters = {
-			-- shfmt = {
-			-- 	prepend_args = { "-i", "2" },
-			-- },
+			shfmt = {
+				prepend_args = { "-i", "2", "-ci" },
+			},
 			clang_format = {
 				prepend_args = { "--style={BasedOnStyle: LLVM, IndentWidth: 4}" },
-			},
-			beautysh = {
-				prepend_args = { "-i", "2" },
 			},
 		},
 	},
