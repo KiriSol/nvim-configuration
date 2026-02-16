@@ -17,9 +17,6 @@ return {
 			"cspell_ls",
 		}
 		vim.lsp.enable(servers)
-		vim.lsp.config("bashls", {
-			filetypes = { "sh", "bash", "zsh" },
-		})
 		vim.lsp.config("pyright", {
 			settings = {
 				python = {

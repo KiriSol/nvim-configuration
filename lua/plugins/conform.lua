@@ -32,7 +32,7 @@ return {
 			cs = { "clang_format" },
 			sh = { "shfmt" },
 			bash = { "shfmt" },
-			zsh = { "shfmt" },
+			-- zsh = { "shfmt" },
 			json = { "prettierd" },
 			yaml = { "prettierd" },
 			html = { "prettierd" },
